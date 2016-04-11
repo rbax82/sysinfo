@@ -1,3 +1,4 @@
+</h1>
 # Copyright (c) 2002-2005 David Rudie
 # All rights reserved.
 #
