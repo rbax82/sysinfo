@@ -36,3 +36,4 @@
 #
 # You can also reach Travis (imbezol) in #crd on efnet.
 # Patched sysinfo281.24.pl to support 4.x kernels - Robert Baxter
+# Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
