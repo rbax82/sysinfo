@@ -22,6 +22,5 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-#
 # Patched sysinfo281.24.pl to support 4.x Linux kernels - Robert Baxter
 # Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
