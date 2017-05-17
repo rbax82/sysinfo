@@ -31,9 +31,5 @@
 # either of us your patches.  My e-mail address is d.rudie@gmail.com and
 # Travis Morgan's e-mail address is imbezol@criticaldamage.com
 #
-# The latest version can be obtained from either http://www.inexistent.com/ or
-# http://imbezol.org/sysinfo/
-#
-# You can also reach Travis (imbezol) in #crd on efnet.
 # Patched sysinfo281.24.pl to support 4.x kernels - Robert Baxter
 # Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
