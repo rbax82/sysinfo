@@ -24,19 +24,6 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# Several additions and fixes to this script were contributed by Travis
-# Morgan and therefore are Copyright (c) 2003-2006 Travis Morgan
-#
-# If you notice any bugs including spacing issues, wrong detection of hardware,
-# obvious features missing, etc, we both want to hear about them.  If you make
-# this script work on other operating systems and/or architectures please send
-# either of us your patches.  My e-mail address is d.rudie@gmail.com and
-# Travis Morgan's e-mail address is imbezol@criticaldamage.com
-#
-# The latest version can be obtained from either http://www.inexistent.com/ or
-# http://imbezol.org/sysinfo/
-#
-# You can also reach Travis (imbezol) in #crd on efnet.
 
 use POSIX qw(floor);
 use strict;
@@ -579,18 +566,18 @@ sub cpuinfo {
 
 sub diskusage {
         if($irix || $irix64) {
-                $vara = `$df | awk '{ sum+=\$3 / 1024 / 1024}; END { print sum }'`; chomp($vara);
-                $vard = `$df | awk '{ sum+=\$4 / 1024 / 1024}; END { print sum }'`; chomp($vard);
+                $vara = `$df | awk '{ sum+=\$3 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vara);
+                $vard = `$df | awk '{ sum+=\$4 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vard);
         } elsif($sun) {
-                $vara = `$df |  swap | grep -v libc | awk '{ sum+=\$2 / 1024 / 1024}; END { print sum }'`; chomp($vara);
-                $vard = `$df | grep -v swap | grep -v libc | awk '{ sum+=\$3 / 1024 / 1024}; END { print sum }'`; chomp($vard);
+                $vara = `$df |  swap | grep -v libc | awk '{ sum+=\$2 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vara);
+                $vard = `$df | grep -v swap | grep -v libc | awk '{ sum+=\$3 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vard);
         } elsif($freebsd) {
                 if ($isJail == '1') { # in jails, storage is listed as /mnt/ mountpoints from the host, not as /dev/ devices
-                        $vara = `$df | grep -v swap | awk '{ sum+=\$2 / 1024 / 1024}; END { print sum }'`; chomp($vara);
-                        $vard = `$df | grep -v swap | awk '{ sum+=\$3 / 1024 / 1024}; END { print sum }'`; chomp($vard);
+                        $vara = `$df | grep -v swap | awk '{ sum+=\$2 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vara);
+                        $vard = `$df | grep -v swap | awk '{ sum+=\$3 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vard);
                 } else {
-                        $vara = `$df | grep dev | awk '{ sum+=\$2 / 1024 / 1024}; END { print sum }'`; chomp($vara);
-                        $vard = `$df | grep dev | awk '{ sum+=\$3 / 1024 / 1024}; END { print sum }'`; chomp($vard);
+                        $vara = `$df | grep dev | awk '{ sum+=\$2 / 1024 / 1024} / 1024; END { print sum }'`; chomp($vara);
+                        $vard = `$df | grep dev | awk '{ sum+=\$3 / 1024 / 1024 / 1024}; END { print sum }'`; chomp($vard);
                 }
         } else  {
                 $vara = `$df | awk '{ sum+=\$2 / 1024 /1024 / 1024}; END { print sum }'`; chomp($vara);
