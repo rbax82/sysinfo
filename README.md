@@ -31,5 +31,5 @@
 # either of us your patches.  My e-mail address is d.rudie@gmail.com and
 # Travis Morgan's e-mail address is imbezol@criticaldamage.com
 #
-# Patched sysinfo281.24.pl to support 4.x kernels - Robert Baxter
+# Patched sysinfo281.24.pl to support 4.x Linux kernels - Robert Baxter
 # Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
