@@ -22,14 +22,6 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# Several additions and fixes to this script were contributed by Travis
-# Morgan and therefore are Copyright (c) 2003-2006 Travis Morgan
-#
-# If you notice any bugs including spacing issues, wrong detection of hardware,
-# obvious features missing, etc, we both want to hear about them.  If you make
-# this script work on other operating systems and/or architectures please send
-# either of us your patches.  My e-mail address is d.rudie@gmail.com and
-# Travis Morgan's e-mail address is imbezol@criticaldamage.com
 #
 # Patched sysinfo281.24.pl to support 4.x Linux kernels - Robert Baxter
 # Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
