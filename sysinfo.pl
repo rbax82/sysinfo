@@ -117,7 +117,7 @@ my $showLoadAverage             = 1;
 my $showBattery                 = 0;    # Requires APM and /proc/apm or /proc/acpi/battery/
 my $showMemoryUsage             = 1;
 my $showDiskUsage               = 1;
-my $showLVMUsage                = 1;
+my $showLVMUsage                = 0;
 my $showNetworkTraffic  = 0;
 my $showDistro                  = 1;
 
