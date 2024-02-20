@@ -24,3 +24,4 @@
 #
 # Patched sysinfo281.24.pl to support 4.x Linux kernels - Robert Baxter
 # Patched sysinfo281.25.pl to switch memory usage to GB and disk usage to TB. - Robert Baxter
+# Dead script is dead
